@@ -2,16 +2,10 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "https://hub.docker.com/repository/docker/santhiyasasi/trend-devops/general"
+        DOCKER_IMAGE = "santhiyasasi/trend-devops"
     }
 
     stages {
-
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/ssanthiya08/trend-devops'
-            }
-        }
 
         stage('Build Docker Image') {
             steps {
